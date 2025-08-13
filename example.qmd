@@ -1,0 +1,31 @@
+---
+title: "Example Code"
+format: html
+---
+
+# Load the palmer penguins data
+```{r}
+# Install packages
+install.packages("palmerpenguins")
+install.packages("tidyverse")
+
+# Import libraries
+library(palmerpenguins)
+library(tidyverse)
+
+# Load data
+data(package = 'palmerpenguins')
+```
+
+# Preview penguins data
+```{r}
+head(penguins)
+```
+
+# Plot penguins data
+```{r}
+ggplot(data = penguins, 
+       aes(x = flipper_length_mm, y = body_mass_g)) 
+  + geom_point(aes(color = species), size = 5)
+
+```
